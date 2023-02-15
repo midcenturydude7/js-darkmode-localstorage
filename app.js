@@ -1,10 +1,10 @@
 // PERSISTANT DARKMODE | BUILT WITH HTML, SCSS & JS
 const toggleBtn = document.getElementById("toggle-btn");
-let element = document.body;
+let element = document.body; // select the entire body
 let lightMode = localStorage.getItem("light-mode");
 
 function enableLightMode() {
-  element.classList.add("light-mode-theme");
+  element.classList.add("light-mode-theme"); // replaces darkMode at the :root
   toggleBtn.classList.remove("light-mode-toggle");
   localStorage.setItem("light-mode", "enabled");
 }
@@ -16,14 +16,10 @@ function disableLightMode() {
 }
 
 if (lightMode === "enabled") {
-  enableLightMode();
+  enableLightMode(); // set state of lightMode on page load | after it has been selected by user
 }
 
 toggleBtn.addEventListener("click", () => {
   lightMode = localStorage.getItem("light-mode"); // Update to LightMode when clicked
-  if (lightMode === "disabled") {
-    enableLightMode();
-  } else {
-    disableLightMode();
-  }
+  lightMode === "disabled" ? enableLightMode() : disableLightMode();
 });
