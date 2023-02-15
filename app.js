@@ -16,10 +16,10 @@ function disableLightMode() {
 }
 
 if (lightMode === "enabled") {
-  enableLightMode(); // set state of lightMode on page load | after it has been selected by user
+  enableLightMode(); // set state of lightMode on page load | user seleciton is stored and persists
 }
 
 toggleBtn.addEventListener("click", () => {
-  lightMode = localStorage.getItem("light-mode"); // Update to LightMode when clicked
-  lightMode === "disabled" ? enableLightMode() : disableLightMode();
+  lightMode = localStorage.getItem("light-mode"); // Update to lightMode when clicked
+  lightMode === "disabled" ? enableLightMode() : disableLightMode(); // Checks mode
 });
