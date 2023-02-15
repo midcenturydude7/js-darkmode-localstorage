@@ -48,6 +48,7 @@ a,
 a:visited {
   text-decoration: none;
   color: var(--TEXT-COLOR);
+  opacity: 1;
 }
 
 a:hover {
@@ -70,13 +71,13 @@ a:hover {
   background: var(--BG-COLOR-HEADER);
   border-bottom: 1px solid var(--BORDER-COLOR-01);
 }
-.wrapper .nav {
+.wrapper .header .nav {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.wrapper .navbar {
+.wrapper .header .nav .navbar {
   width: 300px;
   display: flex;
   justify-content: space-between;
@@ -84,7 +85,7 @@ a:hover {
   padding: 1em 2em;
   font-size: 1.125rem;
 }
-.wrapper .toggle-container .toggle-btn {
+.wrapper .header .nav .toggle-container .toggle-btn {
   font-size: 1.75rem;
   margin-right: 1em;
   cursor: pointer;
@@ -92,10 +93,20 @@ a:hover {
   border: none;
   background: none;
 }
-.wrapper .toggle-container .toggle-btn .icon-text {
+.wrapper .header .nav .toggle-container .toggle-btn .icon-text {
   color: var(--TEXT-COLOR);
   font-size: 2rem;
 }
-.wrapper .toggle-container .toggle-btn:hover {
+.wrapper .header .nav .toggle-container .toggle-btn:hover {
   opacity: 0.75;
+}
+.wrapper .main {
+  width: 100%;
+  border: 1px solid white;
+}
+.wrapper .footer {
+  width: 100%;
+  padding: 3em 0;
+  background: var(--BG-COLOR-HEADER);
+  border: 1px solid white;
 }/*# sourceMappingURL=styles.css.map */

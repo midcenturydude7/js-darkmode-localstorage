@@ -50,6 +50,7 @@ a,
 a:visited {
   text-decoration: none;
   color: var(--TEXT-COLOR);
+  opacity: 1;
 }
 
 a:hover {
@@ -72,41 +73,53 @@ a:hover {
     padding: 1.75em;
     background: var(--BG-COLOR-HEADER);
     border-bottom: 1px solid var(--BORDER-COLOR-01);
-  }
 
-  .nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+    .nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-  .navbar {
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 7em;
-    padding: 1em 2em;
-    font-size: 1.125rem;
-  }
-
-  .toggle-container {
-    .toggle-btn {
-      font-size: 1.75rem;
-      margin-right: 1em;
-      cursor: pointer;
-      padding: 0.085em 0.2em;
-      border: none;
-      background: none;
-
-      .icon-text {
-        color: var(--TEXT-COLOR);
-        font-size: 2rem;
+      .navbar {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 7em;
+        padding: 1em 2em;
+        font-size: 1.125rem;
       }
 
-      &:hover {
-        opacity: 0.75;
+      .toggle-container {
+        .toggle-btn {
+          font-size: 1.75rem;
+          margin-right: 1em;
+          cursor: pointer;
+          padding: 0.085em 0.2em;
+          border: none;
+          background: none;
+
+          .icon-text {
+            color: var(--TEXT-COLOR);
+            font-size: 2rem;
+          }
+
+          &:hover {
+            opacity: 0.75;
+          }
+        }
       }
     }
+  }
+
+  .main {
+    width: 100%;
+    border: 1px solid white;
+  }
+
+  .footer {
+    width: 100%;
+    padding: 3em 0;
+    background: var(--BG-COLOR-HEADER);
+    border: 1px solid white;
   }
 }
