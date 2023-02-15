@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--FONT AWESOME-->
+    <script
+      src="https://kit.fontawesome.com/d13e8b1363.js"
+      crossorigin="anonymous"></script>
+    <!--CSS-->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Persistant Darkmode | Built with HTML, SCSS & JS</title>
   </head>
   <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="nav">
+          <h1>Persistant Darkmode Project</h1>
+          <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="toggle-container">
+            <li>
+              <button class="toggle-btn" id="toggle-btn">
+                <i class="fa-solid fa-light-switch-on"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main"></div>
+      <div class="footer"></div>
+    </div>
     <script src="./app.js" type="module"></script>
   </body>
 </html>
