@@ -7,37 +7,21 @@
 }
 
 :root {
-  --TEXT-COLOR-DARK: whitesmoke;
-  --TEXT-COLOR-LIGHT: #3d3d3d;
-  --LINEAR-GRADIENT-DARK: linear-gradient(to bottom right, #1c2742, #000000);
-  --LINEAR-GRADIENT-LIGHT: linear-gradient(to bottom right, #d8d8d8, #777777);
-  --BORDER-COLOR-01-DARK: #dadada28;
-  --BORDER-COLOR-01-LIGHT: black;
+  --TEXT-COLOR: whitesmoke;
+  --BG-COLOR-MAIN: linear-gradient(to bottom right, #1c2742, #000000);
+  --BG-COLOR-HEADER: rgba(219, 219, 219, 0.034);
+  --BORDER-COLOR-01: #d1d1d121;
 }
 
 /** 
   ** [COLOR SCHEME] ** 
 **/
-.dark-mode-theme {
-  background-image: var(--LINEAR-GRADIENT-DARK);
-  color: var(--TEXT-COLOR-DARK);
-}
-
-.dark-mode-toggle {
-  background-image: var(--LINEAR-GRADIENT-DARK);
-  color: var(--TEXT-COLOR-DARK);
-}
-
-.light-mode-theme {
-  background-image: var(--LINEAR-GRADIENT-LIGHT);
-  color: var(--TEXT-COLOR-LIGHT);
-  border-color: var(--BORDER-COLOR-01-LIGHT);
-}
-
+.light-mode-theme,
 .light-mode-toggle {
-  background-image: var(--LINEAR-GRADIENT-LIGHT);
-  color: var(--TEXT-COLOR-LIGHT);
-  border-color: var(--BORDER-COLOR-01-LIGHT);
+  --BG-COLOR-MAIN: linear-gradient(to bottom right, #d8d8d8, #777777);
+  --BG-COLOR-HEADER: rgba(236, 236, 236, 0.062);
+  --BORDER-COLOR-01: #36363634;
+  --TEXT-COLOR: rgb(71, 71, 71);
 }
 
 /** 
@@ -45,15 +29,14 @@
 **/
 body {
   font-family: "Poppins", sans-serif;
-  background-image: var(--LINEAR-GRADIENT-DARK);
-  color: var(--TEXT-COLOR-DARK);
+  background-image: var(--BG-COLOR-MAIN);
+  color: var(--TEXT-COLOR);
   min-height: 100vh;
-  transition: 1.5s ease;
 }
 
 h1 {
   font-weight: 500;
-  border: 1px solid whitesmoke;
+  border: 1px solid var(--BORDER-COLOR-01);
   padding: 0.25em 0.5em;
 }
 
@@ -65,6 +48,10 @@ a,
 a:visited {
   text-decoration: none;
   color: var(--TEXT-COLOR);
+}
+
+a:hover {
+  opacity: 0.75;
 }
 
 .wrapper {
@@ -80,8 +67,8 @@ a:visited {
 .wrapper .header {
   width: 100%;
   padding: 1.75em;
-  background: rgba(219, 219, 219, 0.034);
-  border-bottom: 1px solid var(--BORDER-COLOR-01-DARK);
+  background: var(--BG-COLOR-HEADER);
+  border-bottom: 1px solid var(--BORDER-COLOR-01);
 }
 .wrapper .nav {
   width: 100%;
@@ -101,6 +88,13 @@ a:visited {
   font-size: 1.75rem;
   margin-right: 1em;
   cursor: pointer;
+  padding: 0.085em 0.2em;
+  border: none;
+  background: none;
+}
+.wrapper .toggle-container .toggle-btn .icon-text {
+  color: var(--TEXT-COLOR);
+  font-size: 2rem;
 }
 .wrapper .toggle-container .toggle-btn:hover {
   opacity: 0.75;
