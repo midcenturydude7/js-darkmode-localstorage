@@ -6,7 +6,9 @@
   padding: 0;
 }
 
-:root {
+:root,
+.dark-mode-theme,
+.dark-mode-toggle {
   --TEXT-COLOR: whitesmoke;
   --BG-COLOR-MAIN: linear-gradient(to bottom right, #1c2742, #000000);
   --BG-COLOR-HEADER: rgba(219, 219, 219, 0.034);
@@ -93,7 +95,7 @@ a:hover {
   border: none;
   background: none;
 }
-.wrapper .header .nav .toggle-container .toggle-btn .icon-text {
+.wrapper .header .nav .toggle-container .toggle-btn #icon-text {
   color: var(--TEXT-COLOR);
   font-size: 2rem;
 }
