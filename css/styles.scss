@@ -111,15 +111,15 @@ a:hover {
     }
   }
 
-  .main {
-    width: 100%;
-    border: 1px solid white;
-  }
+  // .main {
+  //   width: 100%;
+  //   border: 1px solid white;
+  // }
 
   .footer {
     width: 100%;
-    padding: 3em 0;
+    padding: 3em 2em;
     background: var(--BG-COLOR-HEADER);
-    border: 1px solid white;
+    border-top: 1px solid var(--BORDER-COLOR-01);
   }
 }

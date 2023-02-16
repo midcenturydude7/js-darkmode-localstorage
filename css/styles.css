@@ -100,13 +100,9 @@ a:hover {
 .wrapper .header .nav .toggle-container .toggle-btn:hover {
   opacity: 0.75;
 }
-.wrapper .main {
-  width: 100%;
-  border: 1px solid white;
-}
 .wrapper .footer {
   width: 100%;
-  padding: 3em 0;
+  padding: 3em 2em;
   background: var(--BG-COLOR-HEADER);
-  border: 1px solid white;
+  border-top: 1px solid var(--BORDER-COLOR-01);
 }/*# sourceMappingURL=styles.css.map */
