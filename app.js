@@ -1,33 +1,19 @@
 // PERSISTANT DARKMODE | BUILT WITH HTML, SCSS & JS
-const toggleBtn = document.getElementById("toggle-btn");
-const theme = document.getElementById("theme");
-const iconTxt = document.getElementById("icon-text");
-let lightMode = localStorage.getItem("light-mode");
-let darkMode = localStorage.getItem("dark-mode");
+const btn = document.getElementById("toggle-btn");
 
-function enableLightMode() {
-  theme.classList.add("light-mode-theme"); // replaces darkMode at the :root
-  theme.classList.remove("dark-mode-theme");
-  iconTxt.classList.replace("fa-brightness-low", "fa-moon");
-  localStorage.setItem("light-mode", "enabled");
-  localStorage.setItem("dark-mode", "disabled");
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "light") {
+  document.body.classList.add("light-mode-theme");
 }
 
-function disableLightMode() {
-  theme.classList.remove("light-mode-theme");
-  theme.classList.add("dark-mode-theme");
-  iconTxt.classList.replace("fa-moon", "fa-brightness-low");
-  localStorage.setItem("light-mode", "disabled");
-  localStorage.setItem("dark-mode", "enabled");
-}
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode-theme");
 
-if (lightMode === "enabled") {
-  enableLightMode(); // set state of lightMode on page load | user seleciton is stored and persists
-}
-
-toggleBtn.addEventListener("click", () => {
-  lightMode = localStorage.getItem("light-mode"); // Update to lightMode when clicked
-  lightMode === "disabled" ? enableLightMode() : disableLightMode(); // Checks mode
+  let theme = "dark";
+  if (document.body.classList.contains("light-mode-theme")) {
+    theme = "light";
+  }
+  localStorage.setItem("theme", theme);
 });
-console.log(`Lightmode is: ${lightMode}`);
-console.log(`Darkmode is: ${darkMode}`);
+
+console.log(`The current theme is: ${currentTheme}`);
