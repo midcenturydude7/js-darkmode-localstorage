@@ -7,8 +7,7 @@
 }
 
 :root,
-.dark-mode-theme,
-.dark-mode-toggle {
+.dark-mode-theme {
   --TEXT-COLOR: whitesmoke;
   --BG-COLOR-MAIN: linear-gradient(to bottom right, #1c2742, #000000);
   --BG-COLOR-HEADER: rgba(219, 219, 219, 0.034);
@@ -19,8 +18,7 @@
   ** [COLOR SCHEME] ** 
 **/
 
-.light-mode-theme,
-.light-mode-toggle {
+.light-mode-theme {
   --BG-COLOR-MAIN: linear-gradient(to bottom right, #d8d8d8, #777777);
   --BG-COLOR-HEADER: rgba(236, 236, 236, 0.062);
   --BORDER-COLOR-01: #36363634;
