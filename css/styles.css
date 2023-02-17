@@ -86,6 +86,10 @@ a:hover {
   padding: 1em 2em;
   font-size: 1.125rem;
 }
+.wrapper .header .nav .selected {
+  opacity: 0.7;
+  cursor: default;
+}
 .wrapper .header .nav .toggle-container .toggle-btn {
   font-size: 1.75rem;
   margin-right: 1em;

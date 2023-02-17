@@ -91,6 +91,11 @@ a:hover {
         font-size: 1.125rem;
       }
 
+      .selected {
+        opacity: 0.7;
+        cursor: default;
+      }
+
       .toggle-container {
         .toggle-btn {
           font-size: 1.75rem;
