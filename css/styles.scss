@@ -6,8 +6,7 @@
   padding: 0;
 }
 
-:root,
-.dark-mode-theme {
+:root {
   --TEXT-COLOR: whitesmoke;
   --BG-COLOR-MAIN: linear-gradient(to bottom right, #1c2742, #000000);
   --BG-COLOR-HEADER: rgba(219, 219, 219, 0.034);
@@ -23,6 +22,15 @@
   --BG-COLOR-HEADER: rgba(236, 236, 236, 0.062);
   --BORDER-COLOR-01: #36363634;
   --TEXT-COLOR: rgb(71, 71, 71);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --TEXT-COLOR: whitesmoke;
+    --BG-COLOR-MAIN: linear-gradient(to bottom right, #1c2742, #000000);
+    --BG-COLOR-HEADER: rgba(219, 219, 219, 0.034);
+    --BORDER-COLOR-01: #d1d1d121;
+  }
 }
 
 /** 
