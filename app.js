@@ -5,17 +5,23 @@ const iconTxt = document.getElementById("icon-text");
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "light") {
   document.body.classList.add("light-mode-theme");
+  iconTxt.classList.toggle("fa-moon");
 }
 
 btn.addEventListener("click", () => {
   document.body.classList.toggle("light-mode-theme");
-  iconTxt.classList.toggle("fa-moon");
 
   let theme = "dark";
   if (document.body.classList.contains("light-mode-theme")) {
     theme = "light";
   }
   localStorage.setItem("theme", theme);
+
+  if (theme == "light") {
+    iconTxt.classList.replace("fa-brightness-low", "fa-moon");
+  } else if (theme == "dark" || "") {
+    iconTxt.classList.replace("fa-moon", "fa-brightness-low");
+  }
 });
 
 console.log(`The current theme is: ${currentTheme}`);
