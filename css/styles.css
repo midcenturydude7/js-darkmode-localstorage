@@ -13,13 +13,15 @@ body {
   --TEXT-COLOR: whitesmoke;
   --BG-COLOR-MAIN: linear-gradient(to bottom right, #1c2742, #000000);
   --BG-COLOR-HEADER: rgba(219, 219, 219, 0.034);
+  --BG-COLOR-TITLE: linear-gradient(to bottom right, #1d2f5e, #1d1d1d46);
   --BORDER-COLOR-01: #d1d1d121;
 }
 
 body.light-mode-theme {
-  --BG-COLOR-MAIN: linear-gradient(to bottom right, #d8d8d8, #777777);
+  --BG-COLOR-MAIN: linear-gradient(to bottom right, #aaaaaa, #777777);
   --BG-COLOR-HEADER: rgba(236, 236, 236, 0.062);
-  --BORDER-COLOR-01: #36363634;
+  --BG-COLOR-TITLE: linear-gradient(to bottom right, #ebe9e9, #5252524d);
+  --BORDER-COLOR-01: #afafafc9;
   --TEXT-COLOR: rgb(71, 71, 71);
 }
 
@@ -37,6 +39,7 @@ h1 {
   font-weight: 500;
   border: 1px solid var(--BORDER-COLOR-01);
   padding: 0.25em 0.5em;
+  background: var(--BG-COLOR-TITLE);
 }
 
 ul {
@@ -76,7 +79,7 @@ a:hover {
   justify-content: space-between;
 }
 .wrapper .header .nav .navbar {
-  width: 300px;
+  width: 425px;
   display: flex;
   justify-content: space-between;
   margin-right: 7em;
