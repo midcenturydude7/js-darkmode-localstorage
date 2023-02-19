@@ -15,7 +15,6 @@ body {
   --BG-COLOR-MAIN: linear-gradient(to bottom right, #1c2742, #000000);
   --BG-COLOR-HEADER: rgba(219, 219, 219, 0.034);
   --BG-COLOR-TITLE: linear-gradient(to bottom right, #1d2f5e, #1d1d1d46);
-
   --BORDER-COLOR-01: #d1d1d121;
 }
 
@@ -23,7 +22,6 @@ body.light-mode-theme {
   --BG-COLOR-MAIN: linear-gradient(to bottom right, #aaaaaa, #777777);
   --BG-COLOR-HEADER: rgba(236, 236, 236, 0.062);
   --BG-COLOR-TITLE: linear-gradient(to bottom right, #ebe9e9, #5252524d);
-
   --BORDER-COLOR-01: #afafafc9;
   --TEXT-COLOR: rgb(71, 71, 71);
 }
@@ -87,7 +85,11 @@ a:hover {
       justify-content: space-between;
       max-width: 1200px;
 
-      .nav-responsive {
+      .nav-responsive-btn {
+        display: none;
+      }
+
+      .navbar-responsive {
         display: none;
       }
 
@@ -174,7 +176,10 @@ a:hover {
   .wrapper {
     .header {
       .nav {
-        .nav-responsive {
+        align-items: flex-start;
+        transition: all 1s ease;
+
+        .nav-responsive-btn {
           display: block;
           transition: all 1s ease;
 
@@ -183,8 +188,35 @@ a:hover {
               font-size: 1.7rem;
               cursor: pointer;
             }
+
+            #exit-btn {
+              display: none;
+            }
           }
         }
+
+        .navbar-responsive {
+          display: none;
+          flex-direction: column;
+
+          .menu-item {
+            text-align: center;
+          }
+
+          .menu-item:first-child {
+            padding-bottom: 1em;
+          }
+
+          .menu-item + .menu-item {
+            padding: 1em 3em;
+            border-top: 1px solid var(--BORDER-COLOR-01);
+          }
+        }
+
+        .nav-title {
+          display: block;
+        }
+
         .navbar {
           display: none;
           transition: all 1s ease;

@@ -1,7 +1,9 @@
 // PERSISTANT DARKMODE | BUILT WITH HTML, SCSS & JS
+// Global DOM Variables
 const btn = document.getElementById("toggle-btn");
 const iconTxt = document.getElementById("icon-text");
 
+// Theme toggle and storing user preference
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "light") {
   document.body.classList.add("light-mode-theme");
@@ -24,4 +26,27 @@ btn.addEventListener("click", () => {
   }
 });
 
+// Theme check
 console.log(`The current theme is: ${currentTheme}`);
+
+// Responsive Menu
+const get = (element) => document.getElementById(element);
+
+let open = get("menu-btn");
+let navBar = get("navbar-responsive");
+let navTitle = get("nav-title");
+let exit = get("exit-btn");
+
+open.addEventListener("click", () => {
+  navBar.style.display = "flex";
+  navTitle.style.display = "none";
+  open.style.display = "none";
+  exit.style.display = "block";
+});
+
+exit.addEventListener("click", () => {
+  navBar.style.display = "none";
+  navTitle.style.display = "block";
+  open.style.display = "block";
+  exit.style.display = "none";
+});

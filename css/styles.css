@@ -87,7 +87,10 @@ a:hover {
   justify-content: space-between;
   max-width: 1200px;
 }
-.wrapper .header .nav .nav-responsive {
+.wrapper .header .nav .nav-responsive-btn {
+  display: none;
+}
+.wrapper .header .nav .navbar-responsive {
   display: none;
 }
 .wrapper .header .nav .navbar {
@@ -152,13 +155,37 @@ a:hover {
 ** [MEDIA QUERIES] ** 
 **/
 @media (max-width: 800px) {
-  .wrapper .header .nav .nav-responsive {
+  .wrapper .header .nav {
+    align-items: flex-start;
+    transition: all 1s ease;
+  }
+  .wrapper .header .nav .nav-responsive-btn {
     display: block;
     transition: all 1s ease;
   }
-  .wrapper .header .nav .nav-responsive li .icon {
+  .wrapper .header .nav .nav-responsive-btn li .icon {
     font-size: 1.7rem;
     cursor: pointer;
+  }
+  .wrapper .header .nav .nav-responsive-btn li #exit-btn {
+    display: none;
+  }
+  .wrapper .header .nav .navbar-responsive {
+    display: none;
+    flex-direction: column;
+  }
+  .wrapper .header .nav .navbar-responsive .menu-item {
+    text-align: center;
+  }
+  .wrapper .header .nav .navbar-responsive .menu-item:first-child {
+    padding-bottom: 1em;
+  }
+  .wrapper .header .nav .navbar-responsive .menu-item + .menu-item {
+    padding: 1em 3em;
+    border-top: 1px solid var(--BORDER-COLOR-01);
+  }
+  .wrapper .header .nav .nav-title {
+    display: block;
   }
   .wrapper .header .nav .navbar {
     display: none;
