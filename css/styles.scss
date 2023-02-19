@@ -87,8 +87,12 @@ a:hover {
       justify-content: space-between;
       max-width: 1200px;
 
+      .nav-responsive {
+        display: none;
+      }
+
       .navbar {
-        display: inline-block;
+        display: block;
         width: 425px;
         min-width: 400px;
         display: flex;
@@ -170,7 +174,21 @@ a:hover {
   .wrapper {
     .header {
       .nav {
-        display: none;
+        .nav-responsive {
+          display: block;
+          transition: all 1s ease;
+
+          li {
+            .icon {
+              font-size: 1.7rem;
+              cursor: pointer;
+            }
+          }
+        }
+        .navbar {
+          display: none;
+          transition: all 1s ease;
+        }
       }
     }
     .main {

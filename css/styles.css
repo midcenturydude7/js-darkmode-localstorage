@@ -87,8 +87,11 @@ a:hover {
   justify-content: space-between;
   max-width: 1200px;
 }
+.wrapper .header .nav .nav-responsive {
+  display: none;
+}
 .wrapper .header .nav .navbar {
-  display: inline-block;
+  display: block;
   width: 425px;
   min-width: 400px;
   display: flex;
@@ -149,8 +152,17 @@ a:hover {
 ** [MEDIA QUERIES] ** 
 **/
 @media (max-width: 800px) {
-  .wrapper .header .nav {
+  .wrapper .header .nav .nav-responsive {
+    display: block;
+    transition: all 1s ease;
+  }
+  .wrapper .header .nav .nav-responsive li .icon {
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+  .wrapper .header .nav .navbar {
     display: none;
+    transition: all 1s ease;
   }
   .wrapper .main .main-title {
     font-size: 3.5rem;
