@@ -65,6 +65,12 @@ a:hover {
   /** 
   ** [HEADER STYLES] ** 
   **/
+  /** 
+  ** [MAIN STYLES] ** 
+  **/
+  /** 
+  ** [FOOTER STYLES] ** 
+  **/
 }
 .wrapper .header {
   width: 100%;
@@ -73,13 +79,18 @@ a:hover {
   border-bottom: 1px solid var(--BORDER-COLOR-01);
 }
 .wrapper .header .nav {
+  display: block;
   width: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
 }
 .wrapper .header .nav .navbar {
+  display: inline-block;
   width: 425px;
+  min-width: 400px;
   display: flex;
   justify-content: space-between;
   margin-right: 7em;
@@ -106,7 +117,8 @@ a:hover {
   opacity: 0.75;
 }
 .wrapper .main {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,10 +127,33 @@ a:hover {
   border: none;
   text-transform: uppercase;
   font-size: 5rem;
+  transition: all 1s ease;
 }
 .wrapper .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 3em 2em;
   background: var(--BG-COLOR-HEADER);
   border-top: 1px solid var(--BORDER-COLOR-01);
+}
+.wrapper .footer .footer-copyright {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/** 
+** [MEDIA QUERIES] ** 
+**/
+@media (max-width: 800px) {
+  .wrapper .header .nav {
+    display: none;
+  }
+  .wrapper .main .main-title {
+    font-size: 3.5rem;
+    transition: all 1s ease;
+  }
 }/*# sourceMappingURL=styles.css.map */

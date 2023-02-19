@@ -79,13 +79,18 @@ a:hover {
     border-bottom: 1px solid var(--BORDER-COLOR-01);
 
     .nav {
+      display: block;
       width: 100%;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      max-width: 1200px;
 
       .navbar {
+        display: inline-block;
         width: 425px;
+        min-width: 400px;
         display: flex;
         justify-content: space-between;
         margin-right: 7em;
@@ -120,8 +125,12 @@ a:hover {
     }
   }
 
+  /** 
+  ** [MAIN STYLES] ** 
+  **/
   .main {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,13 +139,45 @@ a:hover {
       border: none;
       text-transform: uppercase;
       font-size: 5rem;
+      transition: all 1s ease;
     }
   }
-
+  /** 
+  ** [FOOTER STYLES] ** 
+  **/
   .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 3em 2em;
     background: var(--BG-COLOR-HEADER);
     border-top: 1px solid var(--BORDER-COLOR-01);
+
+    .footer-copyright {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
+/** 
+** [MEDIA QUERIES] ** 
+**/
+@media (max-width: 800px) {
+  .wrapper {
+    .header {
+      .nav {
+        display: none;
+      }
+    }
+    .main {
+      .main-title {
+        font-size: 3.5rem;
+        transition: all 1s ease;
+      }
+    }
   }
 }
