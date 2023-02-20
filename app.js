@@ -37,19 +37,30 @@ let navBar = get("navbar-responsive");
 let navTitle = get("nav-title");
 let exit = get("exit-btn");
 let header = get("header");
+let themeBtn = get("toggle-btn");
+let main = get("main");
+let footer = get("footer");
 
 open.addEventListener("click", () => {
   navBar.classList.add("navbar-responsive-open");
-  header.style.height = "15em";
+  header.style.background = "transparent";
+  header.style.borderBottom = "none";
   navTitle.style.display = "none";
   open.style.display = "none";
   exit.style.display = "block";
+  themeBtn.style.display = "none";
+  main.style.display = "none";
+  // footer.style.display = "none";
 });
 
 exit.addEventListener("click", () => {
-  navBar.classList.replace("navbar-responsive-open", "hideNav");
-  header.style.height = "7.6275em";
+  navBar.classList.remove("navbar-responsive-open");
+  header.style.background = "var(--BG-COLOR-HEADER)";
+  header.style.borderBottom = "1px solid var(--BORDER-COLOR-01)";
   navTitle.style.display = "block";
   open.style.display = "block";
   exit.style.display = "none";
+  themeBtn.style.display = "block";
+  main.style.display = "flex";
+  // footer.style.display = "flex";
 });

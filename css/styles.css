@@ -109,6 +109,7 @@ a:hover {
   cursor: default;
 }
 .wrapper .header .nav .toggle-container .toggle-btn {
+  display: block;
   font-size: 1.75rem;
   margin-right: 1em;
   cursor: pointer;
@@ -119,6 +120,7 @@ a:hover {
 .wrapper .header .nav .toggle-container .toggle-btn #icon-text {
   color: var(--TEXT-COLOR);
   font-size: 2rem;
+  z-index: 3;
 }
 .wrapper .header .nav .toggle-container .toggle-btn:hover {
   opacity: 0.75;
@@ -163,6 +165,7 @@ a:hover {
   }
   .wrapper .header .nav .nav-responsive-btn {
     display: block;
+    z-index: 2;
   }
   .wrapper .header .nav .nav-responsive-btn li .icon {
     font-size: 1.7rem;
@@ -176,10 +179,10 @@ a:hover {
     position: fixed;
     top: -100%;
     bottom: 0;
-    left: 25%;
+    left: 0;
     right: 0;
-    margin-top: 1.7em;
-    height: 100%;
+    background: var(--BG-COLOR-HEADER);
+    padding-top: 1.7em;
     display: none;
   }
   @keyframes showNav {
@@ -206,10 +209,15 @@ a:hover {
     flex-direction: column;
     align-items: center;
     animation: showNav 1s ease forwards;
-    width: 50%;
+    width: 100%;
+    height: 100vh;
+    background: var(--BG-COLOR-HEADER);
+    border-bottom: 1px solid var(--BORDER-COLOR-01);
+    z-index: 1;
   }
   .wrapper .header .nav .navbar-responsive-open .menu-item {
     text-align: center;
+    width: 50%;
   }
   .wrapper .header .nav .navbar-responsive-open .menu-item:first-child {
     padding-bottom: 1em;
@@ -228,8 +236,5 @@ a:hover {
   .wrapper .main .main-title {
     font-size: 3.5rem;
     transition: all 1s ease;
-  }
-  .hidden {
-    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
