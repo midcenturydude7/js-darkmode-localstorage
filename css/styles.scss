@@ -228,15 +228,19 @@ a:hover {
           }
         }
 
-        .hideNav {
+        .navbar-responsive-open {
+          animation: showNav 1s ease forwards;
+        }
+
+        .navbar-responsive-close {
           animation: hideNav 1s ease forwards;
         }
 
-        .navbar-responsive-open {
+        .navbar-responsive-open,
+        .navbar-responsive-close {
           display: flex;
           flex-direction: column;
           align-items: center;
-          animation: showNav 1s ease forwards;
           width: 100%;
           height: 100vh;
           background: var(--BG-COLOR-HEADER);

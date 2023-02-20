@@ -201,28 +201,34 @@ a:hover {
       top: -100%;
     }
   }
-  .wrapper .header .nav .hideNav {
+  .wrapper .header .nav .navbar-responsive-open {
+    animation: showNav 1s ease forwards;
+  }
+  .wrapper .header .nav .navbar-responsive-close {
     animation: hideNav 1s ease forwards;
   }
-  .wrapper .header .nav .navbar-responsive-open {
+  .wrapper .header .nav .navbar-responsive-open,
+  .wrapper .header .nav .navbar-responsive-close {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: showNav 1s ease forwards;
     width: 100%;
     height: 100vh;
     background: var(--BG-COLOR-HEADER);
     border-bottom: 1px solid var(--BORDER-COLOR-01);
     z-index: 1;
   }
-  .wrapper .header .nav .navbar-responsive-open .menu-item {
+  .wrapper .header .nav .navbar-responsive-open .menu-item,
+  .wrapper .header .nav .navbar-responsive-close .menu-item {
     text-align: center;
     width: 50%;
   }
-  .wrapper .header .nav .navbar-responsive-open .menu-item:first-child {
+  .wrapper .header .nav .navbar-responsive-open .menu-item:first-child,
+  .wrapper .header .nav .navbar-responsive-close .menu-item:first-child {
     padding-bottom: 1em;
   }
-  .wrapper .header .nav .navbar-responsive-open .menu-item + .menu-item {
+  .wrapper .header .nav .navbar-responsive-open .menu-item + .menu-item,
+  .wrapper .header .nav .navbar-responsive-close .menu-item + .menu-item {
     padding: 1em 3em;
     border-top: 1px solid var(--BORDER-COLOR-01);
   }
