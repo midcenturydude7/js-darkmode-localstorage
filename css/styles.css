@@ -74,6 +74,7 @@ a:hover {
 }
 .wrapper .header {
   width: 100%;
+  height: auto;
   padding: 1.75em;
   background: var(--BG-COLOR-HEADER);
   border-bottom: 1px solid var(--BORDER-COLOR-01);
@@ -156,12 +157,12 @@ a:hover {
 **/
 @media (max-width: 800px) {
   .wrapper .header .nav {
+    position: relative;
     align-items: flex-start;
     transition: all 1s ease;
   }
   .wrapper .header .nav .nav-responsive-btn {
     display: block;
-    transition: all 1s ease;
   }
   .wrapper .header .nav .nav-responsive-btn li .icon {
     font-size: 1.7rem;
@@ -169,19 +170,43 @@ a:hover {
   }
   .wrapper .header .nav .nav-responsive-btn li #exit-btn {
     display: none;
+    cursor: pointer;
   }
   .wrapper .header .nav .navbar-responsive {
-    opacity: 0;
-    height: 0;
+    position: fixed;
+    top: -100%;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+    margin-top: 1.7em;
+    height: 100%;
     display: none;
-    transition: height 1s ease;
+  }
+  @keyframes showNav {
+    from {
+      top: -100%;
+    }
+    to {
+      top: 0;
+    }
+  }
+  @keyframes hideNav {
+    from {
+      top: 0;
+    }
+    to {
+      top: -100%;
+    }
+  }
+  .wrapper .header .nav .hideNav {
+    animation: hideNav 1s ease forwards;
   }
   .wrapper .header .nav .navbar-responsive-open {
-    opacity: 1;
     display: flex;
     flex-direction: column;
-    height: 12em;
-    transition: height 1s ease;
+    align-items: center;
+    animation: showNav 1s ease forwards;
+    width: 50%;
   }
   .wrapper .header .nav .navbar-responsive-open .menu-item {
     text-align: center;
@@ -194,7 +219,7 @@ a:hover {
     border-top: 1px solid var(--BORDER-COLOR-01);
   }
   .wrapper .header .nav .nav-title {
-    display: none;
+    display: block;
   }
   .wrapper .header .nav .navbar {
     display: none;
@@ -203,5 +228,8 @@ a:hover {
   .wrapper .main .main-title {
     font-size: 3.5rem;
     transition: all 1s ease;
+  }
+  .hidden {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
