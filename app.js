@@ -38,14 +38,16 @@ let navTitle = get("nav-title");
 let exit = get("exit-btn");
 
 open.addEventListener("click", () => {
-  navBar.style.display = "flex";
+  // navBar.style.display = "flex";
+  navBar.classList.add("navbar-responsive-open");
   navTitle.style.display = "none";
   open.style.display = "none";
   exit.style.display = "block";
 });
 
 exit.addEventListener("click", () => {
-  navBar.style.display = "none";
+  // navBar.style.display = "none";
+  navBar.classList.remove("navbar-responsive-open");
   navTitle.style.display = "block";
   open.style.display = "block";
   exit.style.display = "none";
